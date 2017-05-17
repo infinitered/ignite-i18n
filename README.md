@@ -1,5 +1,7 @@
 # ignite-i18n
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/infinitered/ignite-i18n.svg)](https://greenkeeper.io/)
+
 An [ignite plugin](https://github.com/infinitered/ignite) for [react-native-i18n](https://github.com/AlexanderZaytsev/react-native-i18n).
 
 ## Premium Support
