@@ -5,7 +5,7 @@ const add = async function (context) {
   const { ignite, filesystem } = context
 
   // install a npm module
-  await ignite.addModule(NPM_MODULE_NAME, { link: true })
+  await ignite.addModule(NPM_MODULE_NAME, { version: '1.0.0', link: true })
 
   // copy the example file (if examples are turned on)
   await ignite.addPluginComponentExample(EXAMPLE_FILE, { title: 'i18n Example' })
