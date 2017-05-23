@@ -1,5 +1,5 @@
 const NPM_MODULE_NAME = 'react-native-i18n'
-const EXAMPLE_FILE = 'i18nExample.js'
+const EXAMPLE_FILE = 'i18nExample.js.ejs'
 
 const add = async function (context) {
   const { ignite, filesystem } = context

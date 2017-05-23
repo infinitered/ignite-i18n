@@ -19,7 +19,7 @@ test('removes translations if asked', async t => {
   await plugin.remove(context)
 
   t.true(removeModule.calledWith('react-native-i18n', { unlink: true }))
-  t.true(removePluginComponentExample.calledWith('i18nExample.js'))
+  t.true(removePluginComponentExample.calledWith('i18nExample.js.ejs'))
   t.true(confirm.called)
   t.is(remove.args[0][0], `${process.cwd()}/App/I18n`)
   t.is(replaceInFile.args[0][0], `${process.cwd()}/App/Config/AppConfig.js`)
@@ -43,7 +43,7 @@ test('doesn\'t remove translations if use said no', async t => {
   await plugin.remove(context)
 
   t.true(removeModule.calledWith('react-native-i18n', { unlink: true }))
-  t.true(removePluginComponentExample.calledWith('i18nExample.js'))
+  t.true(removePluginComponentExample.calledWith('i18nExample.js.ejs'))
   t.true(confirm.called)
   t.false(remove.called)
   t.is(replaceInFile.args[0][0], `${process.cwd()}/App/Config/AppConfig.js`)
