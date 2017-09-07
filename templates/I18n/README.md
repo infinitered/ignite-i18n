@@ -14,7 +14,7 @@ Run `ignite add i18n`.
 
 TODO: Real usage example.
 
-    import I18n from 'react-native-i18n';
+    import I18n from 'App/I18n';
 
     render() {
     ...
