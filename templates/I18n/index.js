@@ -2,7 +2,7 @@ import I18n from 'react-native-i18n'
 
 // This function is a wrapper to avoid exception wich leads in a crash
 const translateOrFallback = msg => {
-  let localMsg = I18n.t('unknownError')
+  let localMsg = msg
   try{
     localMsg = I18n.t(msg)
   }catch(e){
