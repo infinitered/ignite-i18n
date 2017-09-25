@@ -70,9 +70,6 @@ switch (languageCode) {
   case 'hu':
     I18n.translations.hu = require('./languages/hu.json')
     break
-  case 'in':
-    I18n.translations.in = require('./languages/id.json')
-    break
   case 'id':
     I18n.translations.id = require('./languages/id.json')
     break
