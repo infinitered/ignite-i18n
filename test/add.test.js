@@ -2,6 +2,8 @@ const test = require('ava')
 const sinon = require('sinon')
 const plugin = require('../plugin')
 
+const NPM_MODULE_VERSION = '2.0.14' // update in plugin.js too
+
 test('copies templates when they do not exist', async t => {
   // spy on few things so we know they're called
   const addModule = sinon.spy()
@@ -18,7 +20,10 @@ test('copies templates when they do not exist', async t => {
 
   await plugin.add(context)
   t.true(
-    addModule.calledWith('react-native-i18n', { version: '1.0.0', link: true })
+    addModule.calledWith('react-native-i18n', {
+      version: NPM_MODULE_VERSION,
+      link: true
+    })
   )
   t.true(
     addPluginComponentExample.calledWith('i18nExample.js.ejs', {
@@ -46,7 +51,10 @@ test('does not clobber existing templates', async t => {
 
   await plugin.add(context)
   t.true(
-    addModule.calledWith('react-native-i18n', { version: '1.0.0', link: true })
+    addModule.calledWith('react-native-i18n', {
+      version: NPM_MODULE_VERSION,
+      link: true
+    })
   )
   t.true(
     addPluginComponentExample.calledWith('i18nExample.js.ejs', {

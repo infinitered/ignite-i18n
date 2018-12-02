@@ -1,11 +1,15 @@
 const NPM_MODULE_NAME = 'react-native-i18n'
+const NPM_MODULE_VERSION = '2.0.14' // update in `add.test.js` too
 const EXAMPLE_FILE = 'i18nExample.js.ejs'
 
 const add = async function(context) {
   const { ignite, filesystem } = context
 
   // install a npm module
-  await ignite.addModule(NPM_MODULE_NAME, { version: '2.0.14', link: true })
+  await ignite.addModule(NPM_MODULE_NAME, {
+    version: NPM_MODULE_VERSION,
+    link: true
+  })
 
   // copy the example file (if examples are turned on)
   await ignite.addPluginComponentExample(EXAMPLE_FILE, {
