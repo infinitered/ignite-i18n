@@ -1,14 +1,16 @@
 const NPM_MODULE_NAME = 'react-native-i18n'
 const EXAMPLE_FILE = 'i18nExample.js.ejs'
 
-const add = async function (context) {
+const add = async function(context) {
   const { ignite, filesystem } = context
 
   // install a npm module
   await ignite.addModule(NPM_MODULE_NAME, { version: '2.0.14', link: true })
 
   // copy the example file (if examples are turned on)
-  await ignite.addPluginComponentExample(EXAMPLE_FILE, { title: 'i18n Example' })
+  await ignite.addPluginComponentExample(EXAMPLE_FILE, {
+    title: 'i18n Example'
+  })
 
   // Copy templates/I18n to App/I18n if it doesn't already exist
   if (!filesystem.exists(`${process.cwd()}/App/I18n`)) {
@@ -25,7 +27,7 @@ const add = async function (context) {
 /**
  * Remove yourself from the project.
  */
-const remove = async function (context) {
+const remove = async function(context) {
   const { ignite, filesystem, patching } = context
 
   // remove the npm module
@@ -38,10 +40,16 @@ const remove = async function (context) {
   const removeI18n = await context.prompt.confirm(
     'Do you want to remove all of your translation files in App/I18n?'
   )
-  if (removeI18n) { filesystem.remove(`${process.cwd()}/App/I18n`) }
+  if (removeI18n) {
+    filesystem.remove(`${process.cwd()}/App/I18n`)
+  }
 
   // Remove i18n from AppConfig
-  patching.replaceInFile(`${process.cwd()}/App/Config/AppConfig.js`, `import '../I18n/I18n'\n`, '')
+  patching.replaceInFile(
+    `${process.cwd()}/App/Config/AppConfig.js`,
+    `import '../I18n/I18n'\n`,
+    ''
+  )
 }
 
 module.exports = { add, remove }

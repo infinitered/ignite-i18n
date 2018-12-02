@@ -31,5 +31,9 @@
     "nyc": "^10.1.2",
     "sinon": "^1.17.7",
     "standard": "^8.6.0"
+  },
+  "prettier": {
+    "singleQuote": true,
+    "semi": false
   }
 }

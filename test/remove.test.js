@@ -26,7 +26,7 @@ test('removes translations if asked', async t => {
   t.is(replaceInFile.args[0][1], `import '../I18n/I18n'\n`)
 })
 
-test('doesn\'t remove translations if use said no', async t => {
+test("doesn't remove translations if use said no", async t => {
   const removeModule = sinon.spy()
   const removePluginComponentExample = sinon.spy()
   const confirm = sinon.stub().returns(false)

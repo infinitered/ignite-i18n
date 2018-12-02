@@ -17,7 +17,9 @@ test('copies templates when they do not exist', async t => {
   }
 
   await plugin.add(context)
-  t.true(addModule.calledWith('react-native-i18n', { version: '1.0.0', link: true }))
+  t.true(
+    addModule.calledWith('react-native-i18n', { version: '1.0.0', link: true })
+  )
   t.true(
     addPluginComponentExample.calledWith('i18nExample.js.ejs', {
       title: 'i18n Example'
@@ -43,7 +45,9 @@ test('does not clobber existing templates', async t => {
   }
 
   await plugin.add(context)
-  t.true(addModule.calledWith('react-native-i18n', { version: '1.0.0', link: true }))
+  t.true(
+    addModule.calledWith('react-native-i18n', { version: '1.0.0', link: true })
+  )
   t.true(
     addPluginComponentExample.calledWith('i18nExample.js.ejs', {
       title: 'i18n Example'
