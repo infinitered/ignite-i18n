@@ -1,5 +1,9 @@
 # ignite-i18n
 
+## Why is this archived?
+
+We really appreciate all the community support in the years since we first released ignite-i18n. Our focus has shifted to the latest version of [Ignite](https://github.com/infinitered/ignite), which does not have a plugin-based architecture ([read more here](https://shift.infinite.red/introducing-ignite-4-0-flame-1dfc891f9966)). Feel free to fork this library and continue on its legacy if you want. 
+
 An [Ignite plugin](https://github.com/infinitered/ignite) for adding [react-native-i18n](https://github.com/AlexanderZaytsev/react-native-i18n) to your React Native project.
 
 ## Premium Support
